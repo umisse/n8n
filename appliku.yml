@@ -1,6 +1,8 @@
 "build_settings":
-  "build_image": "python-3.13-node-20.18"
+  "build_image": "custom"
   "environment_variables": []
+  "dockerfile": |-
+    FROM docker.n8n.io/n8nio/n8n
   "container_port": 5678
   "skip_release_command": true
 "services":
