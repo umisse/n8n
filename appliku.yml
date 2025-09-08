@@ -1,0 +1,21 @@
+"build_settings":
+  "build_image": "python-3.13-node-20.18"
+  "environment_variables": []
+  "container_port": 5678
+  "skip_release_command": true
+"services":
+  "web":
+    "scale": 1
+    "environment_variables":
+      - "name": "TZ"
+        "value": "\"America/New_York\""
+      - "name": "GENERIC_TIMEZONE"
+        "value": "\"America/New_York\""
+      - "name": "N8N_RUNNERS_ENABLED"
+        "value": "true"
+      - "name": "N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS"
+        "value": "true"
+    "image": "docker.n8n.io/n8nio/n8n"
+    "volumes":
+      - "n8n_data:/home/node/.n8n"
+"databases": {}
